@@ -1,5 +1,5 @@
-const apiKey = "";
-const apiUrl = "";
+const apiKey = "Inset Ur API key";
+const apiUrl = "Enter Url";
 
 const searchBar = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
@@ -18,8 +18,9 @@ async function checkWeather(city){
         console.log(data)
         document.querySelector(".city").innerHTML = innerHTML = data.name;
         document.querySelector(".temp").innerHTML = innerHTML = Math.round(data.main.temp) + "°c";
-        document.querySelector(".humidity").innerHTML = innerHTML = data.main.humidity + "%";
-        document.querySelector(".wind").innerHTML = innerHTML = data.wind.speed + "km/h";
+        document.querySelector(".humidity").innerHTML = innerHTML = data.main.humidity + " %";
+        document.querySelector(".wind").innerHTML = innerHTML = data.wind.speed + " km/h";
+        document.querySelector(".pressure").innerHTML = innerHTML = data.main.pressure + " Pa";
 
         const weatherType = data.weather[0].main;
 
